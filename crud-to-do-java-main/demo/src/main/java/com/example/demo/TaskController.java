@@ -27,7 +27,7 @@ public class TaskController {
     // public Collection<Task> getTasks() { 
     //     return service.getTasks(); }
 
-    @GetMapping(value="/tasks", produces={"application/json","application/xml"})
+    @GetMapping(value="/tarefas", produces={"application/json","application/xml"})
 	public ResponseEntity<Collection<Task>> getTasks() {
 		Collection<Task> result = service.getTasks();
 		return ResponseEntity.ok().body(result);
@@ -38,7 +38,7 @@ public class TaskController {
 	// 	return service.getTask(id);
 	// }
 
-	@GetMapping(value="/task/{id}", produces={"application/json","application/xml"})
+	@GetMapping(value="/tarefas/{id}", produces={"application/json","application/xml"})
 	public ResponseEntity<Task> getItem(@PathVariable int id) {
 		Task result = service.getTask(id);
 		if (service.getTask(id) == null)
@@ -56,7 +56,7 @@ public class TaskController {
 	// 	return task;
 	// }
 
-	@PostMapping(value="/task",
+	@PostMapping(value="/tarefas",
 			consumes={"application/json","application/xml"},
 			produces={"application/json","application/xml"})
 	public ResponseEntity<Task> addTask(@RequestBody Task task) {
@@ -71,7 +71,7 @@ public class TaskController {
 	// 	service.update(task);
 	// }    
 
-	@PutMapping(value="/task/{id}", consumes={"application/json","application/xml"})
+	@PutMapping(value="/tarefas/{id}", consumes={"application/json","application/xml"})
 	public ResponseEntity modifyTask(@PathVariable int id, @RequestBody Task task) {
 		if (service.getTask(id) == null)
 			return ResponseEntity.notFound().build();
@@ -86,7 +86,7 @@ public class TaskController {
 	// 	service.delete(id);
 	// }
 
-    @DeleteMapping("/task/{id}")
+    @DeleteMapping("/tarefas/{id}")
 	public ResponseEntity deleteTask(@PathVariable int id) {
 		if (service.getTask(id) == null)
 			return ResponseEntity.notFound().build();

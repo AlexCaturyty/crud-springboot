@@ -15,10 +15,10 @@ public class TaskImpl implements TaskService {
     private int nextId = 1;
 
     {
-        insert(new Task("Fazer a atividade", true));
-        insert(new Task("Fazer o almoço", false));
-        insert(new Task("Tomar banho", true));
-        insert(new Task("Recarregar o celular", false));
+        insert(new Task("Varrer a casa", true));
+        insert(new Task("Estudar sobre matéria X", false));
+        insert(new Task("fazer almoço", true));
+        insert(new Task("Fazer a atividade x", false));
     }
 
     @Override
