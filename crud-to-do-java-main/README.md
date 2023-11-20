@@ -1,2 +1,3 @@
 # crud-to-do-java
-atividade java sring to-do-crud
+Atividade CRUD.
+A Rota para acessar as tarefas é: ###/taskManager/tarefas
